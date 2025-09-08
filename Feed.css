@@ -1,0 +1,221 @@
+/* src/styles/Feed.css */
+.feed-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--background-secondary);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-light);
+}
+
+.feed-create-prompt {
+  background: linear-gradient(135deg, #e3f2fd, #f3f2ef);
+  border: 2px solid var(--primary-blue);
+  border-radius: var(--border-radius-large);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.feed-create-prompt:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.feed-create-text {
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.post-card {
+  background: var(--background-secondary);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-light);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.post-card:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.post-header {
+  padding: 1.5rem 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-light);
+}
+
+.post-author-info h4 {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.post-author-info span {
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.post-content {
+  padding: 0 1.5rem 1rem;
+}
+
+.post-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+  background: #fafafa;
+}
+
+.post-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--text-light);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-size: 0.875rem;
+}
+
+.post-action-btn:hover {
+  background: var(--background-secondary);
+  color: var(--primary-blue);
+}
+
+.post-action-btn.liked {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.comments-section {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+  background: #f9f9f9;
+}
+
+.comment-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  background: var(--background-secondary);
+}
+
+.comment-submit {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.comment-submit:hover {
+  background: var(--primary-blue-dark);
+}
+
+.comment-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--background-secondary);
+  border-radius: var(--border-radius);
+}
+
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-author {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.comment-text {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .feed-container {
+    padding: 0 1rem;
+  }
+  
+  .feed-create-prompt {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .post-actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .comment-form {
+    flex-direction: column;
+  }
+}
